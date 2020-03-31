@@ -4,33 +4,33 @@
       img(src= url_for('images/logo@2x.png'),style="width:127px;")
       h3(title="")
         a(href="/")= config.title
-      if theme.description
+      if config.description
         .description
-          p= theme.description
+          p= config.description
 
   ul.social-links
-    if theme.twitter
+    if config.theme_config.twitter
       li
-        a(href="https://twitter.com/" + theme.twitter)
+        a(href="https://twitter.com/" + config.theme_config.twitter)
           i.fa.fa-twitter
-    if theme.instagram
+    if config.theme_config.instagram
       li
-        a(href="http://instagram.com/" + theme.instagram)
+        a(href="http://instagram.com/" + config.theme_config.instagram)
           i.fa.fa-instagram
-    if theme.rss
+    if config.theme_config.rss
       li
-        a(href= url_for(theme.rss))
+        a(href= url_for(config.theme_config.rss))
           i.fa.fa-rss
-    if theme.weibo
+    if config.theme_config.weibo
       li
-        a(href="http://weibo.com/" + theme.weibo)
+        a(href="http://weibo.com/" + config.theme_config.weibo)
           i.fa.fa-weibo
-    if theme.facebook
+    if config.theme_config.facebook
       li
-        a(href="http://facebook.com/" + theme.facebook)
+        a(href="http://facebook.com/" + config.theme_config.facebook)
           i.fa.fa-facebook
-    if theme.github
+    if config.theme_config.github
       li
-        a(href="http://github.com/" + theme.github)
+        a(href="http://github.com/" + config.theme_config.github)
           i.fa.fa-github
   include footer
